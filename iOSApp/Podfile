@@ -1,0 +1,5 @@
+target 'rns-ipad' do
+    use_frameworks!
+    pod 'SwiftSocket'
+end
+

@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42E619C774E740EE460F33BC /* Pods_rns_ipad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CC7D99E2CB1BC0063B5E78 /* Pods_rns_ipad.framework */; };
+		53EBCA14229BA09800744670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCA13229BA09800744670 /* AppDelegate.swift */; };
+		53EBCA16229BA09800744670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCA15229BA09800744670 /* ViewController.swift */; };
+		53EBCA19229BA09800744670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EBCA17229BA09800744670 /* Main.storyboard */; };
+		53EBCA1B229BA09900744670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EBCA1A229BA09900744670 /* Assets.xcassets */; };
+		53EBCA1E229BA09900744670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EBCA1C229BA09900744670 /* LaunchScreen.storyboard */; };
+		53EBCA29229BA09A00744670 /* rns_ipadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCA28229BA09A00744670 /* rns_ipadTests.swift */; };
+		53EBCA34229BA09A00744670 /* rns_ipadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCA33229BA09A00744670 /* rns_ipadUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53EBCA25229BA09A00744670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53EBCA08229BA09800744670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53EBCA0F229BA09800744670;
+			remoteInfo = "rns-ipad";
+		};
+		53EBCA30229BA09A00744670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53EBCA08229BA09800744670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53EBCA0F229BA09800744670;
+			remoteInfo = "rns-ipad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16F5F8026A09ECAF905EC546 /* Pods-rns-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rns-ipad.release.xcconfig"; path = "Target Support Files/Pods-rns-ipad/Pods-rns-ipad.release.xcconfig"; sourceTree = "<group>"; };
+		53E47A7D2389B6EE00B12DA7 /* rns-ipad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "rns-ipad.entitlements"; sourceTree = "<group>"; };
+		53EBCA10229BA09800744670 /* rns-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rns-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EBCA13229BA09800744670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53EBCA15229BA09800744670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53EBCA18229BA09800744670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53EBCA1A229BA09900744670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53EBCA1D229BA09900744670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53EBCA1F229BA09900744670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EBCA24229BA09A00744670 /* rns-ipadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rns-ipadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EBCA28229BA09A00744670 /* rns_ipadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rns_ipadTests.swift; sourceTree = "<group>"; };
+		53EBCA2A229BA09A00744670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EBCA2F229BA09A00744670 /* rns-ipadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rns-ipadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EBCA33229BA09A00744670 /* rns_ipadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rns_ipadUITests.swift; sourceTree = "<group>"; };
+		53EBCA35229BA09A00744670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5CC7D99E2CB1BC0063B5E78 /* Pods_rns_ipad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rns_ipad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A237A1581827EB36616C45 /* Pods-rns-ipad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rns-ipad.debug.xcconfig"; path = "Target Support Files/Pods-rns-ipad/Pods-rns-ipad.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53EBCA0D229BA09800744670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E619C774E740EE460F33BC /* Pods_rns_ipad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA21229BA09A00744670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA2C229BA09A00744670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C20757442358A750E42A24E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9A237A1581827EB36616C45 /* Pods-rns-ipad.debug.xcconfig */,
+				16F5F8026A09ECAF905EC546 /* Pods-rns-ipad.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		509921A854DB27068BF38F6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5CC7D99E2CB1BC0063B5E78 /* Pods_rns_ipad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53EBCA07229BA09800744670 = {
+			isa = PBXGroup;
+			children = (
+				53EBCA12229BA09800744670 /* rns-ipad */,
+				53EBCA27229BA09A00744670 /* rns-ipadTests */,
+				53EBCA32229BA09A00744670 /* rns-ipadUITests */,
+				53EBCA11229BA09800744670 /* Products */,
+				4C20757442358A750E42A24E /* Pods */,
+				509921A854DB27068BF38F6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53EBCA11229BA09800744670 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53EBCA10229BA09800744670 /* rns-ipad.app */,
+				53EBCA24229BA09A00744670 /* rns-ipadTests.xctest */,
+				53EBCA2F229BA09A00744670 /* rns-ipadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53EBCA12229BA09800744670 /* rns-ipad */ = {
+			isa = PBXGroup;
+			children = (
+				53E47A7D2389B6EE00B12DA7 /* rns-ipad.entitlements */,
+				53EBCA13229BA09800744670 /* AppDelegate.swift */,
+				53EBCA15229BA09800744670 /* ViewController.swift */,
+				53EBCA17229BA09800744670 /* Main.storyboard */,
+				53EBCA1A229BA09900744670 /* Assets.xcassets */,
+				53EBCA1C229BA09900744670 /* LaunchScreen.storyboard */,
+				53EBCA1F229BA09900744670 /* Info.plist */,
+			);
+			path = "rns-ipad";
+			sourceTree = "<group>";
+		};
+		53EBCA27229BA09A00744670 /* rns-ipadTests */ = {
+			isa = PBXGroup;
+			children = (
+				53EBCA28229BA09A00744670 /* rns_ipadTests.swift */,
+				53EBCA2A229BA09A00744670 /* Info.plist */,
+			);
+			path = "rns-ipadTests";
+			sourceTree = "<group>";
+		};
+		53EBCA32229BA09A00744670 /* rns-ipadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53EBCA33229BA09A00744670 /* rns_ipadUITests.swift */,
+				53EBCA35229BA09A00744670 /* Info.plist */,
+			);
+			path = "rns-ipadUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53EBCA0F229BA09800744670 /* rns-ipad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EBCA38229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipad" */;
+			buildPhases = (
+				9E425A76B32C72C5C6CB3FE2 /* [CP] Check Pods Manifest.lock */,
+				53EBCA0C229BA09800744670 /* Sources */,
+				53EBCA0D229BA09800744670 /* Frameworks */,
+				53EBCA0E229BA09800744670 /* Resources */,
+				F8CC00269BAAD8A6FA5FC63A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rns-ipad";
+			productName = "rns-ipad";
+			productReference = 53EBCA10229BA09800744670 /* rns-ipad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53EBCA23229BA09A00744670 /* rns-ipadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EBCA3B229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipadTests" */;
+			buildPhases = (
+				53EBCA20229BA09A00744670 /* Sources */,
+				53EBCA21229BA09A00744670 /* Frameworks */,
+				53EBCA22229BA09A00744670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53EBCA26229BA09A00744670 /* PBXTargetDependency */,
+			);
+			name = "rns-ipadTests";
+			productName = "rns-ipadTests";
+			productReference = 53EBCA24229BA09A00744670 /* rns-ipadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53EBCA2E229BA09A00744670 /* rns-ipadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EBCA3E229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipadUITests" */;
+			buildPhases = (
+				53EBCA2B229BA09A00744670 /* Sources */,
+				53EBCA2C229BA09A00744670 /* Frameworks */,
+				53EBCA2D229BA09A00744670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53EBCA31229BA09A00744670 /* PBXTargetDependency */,
+			);
+			name = "rns-ipadUITests";
+			productName = "rns-ipadUITests";
+			productReference = 53EBCA2F229BA09A00744670 /* rns-ipadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53EBCA08229BA09800744670 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Uros Topalovic";
+				TargetAttributes = {
+					53EBCA0F229BA09800744670 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					53EBCA23229BA09A00744670 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 53EBCA0F229BA09800744670;
+					};
+					53EBCA2E229BA09A00744670 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 53EBCA0F229BA09800744670;
+					};
+				};
+			};
+			buildConfigurationList = 53EBCA0B229BA09800744670 /* Build configuration list for PBXProject "rns-ipad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53EBCA07229BA09800744670;
+			productRefGroup = 53EBCA11229BA09800744670 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53EBCA0F229BA09800744670 /* rns-ipad */,
+				53EBCA23229BA09A00744670 /* rns-ipadTests */,
+				53EBCA2E229BA09A00744670 /* rns-ipadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53EBCA0E229BA09800744670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EBCA1E229BA09900744670 /* LaunchScreen.storyboard in Resources */,
+				53EBCA1B229BA09900744670 /* Assets.xcassets in Resources */,
+				53EBCA19229BA09800744670 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA22229BA09A00744670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA2D229BA09A00744670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E425A76B32C72C5C6CB3FE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rns-ipad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8CC00269BAAD8A6FA5FC63A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rns-ipad/Pods-rns-ipad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rns-ipad/Pods-rns-ipad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rns-ipad/Pods-rns-ipad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53EBCA0C229BA09800744670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EBCA16229BA09800744670 /* ViewController.swift in Sources */,
+				53EBCA14229BA09800744670 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA20229BA09A00744670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EBCA29229BA09A00744670 /* rns_ipadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EBCA2B229BA09A00744670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EBCA34229BA09A00744670 /* rns_ipadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53EBCA26229BA09A00744670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53EBCA0F229BA09800744670 /* rns-ipad */;
+			targetProxy = 53EBCA25229BA09A00744670 /* PBXContainerItemProxy */;
+		};
+		53EBCA31229BA09A00744670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53EBCA0F229BA09800744670 /* rns-ipad */;
+			targetProxy = 53EBCA30229BA09A00744670 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53EBCA17229BA09800744670 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EBCA18229BA09800744670 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53EBCA1C229BA09900744670 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EBCA1D229BA09900744670 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53EBCA36229BA09A00744670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		53EBCA37229BA09A00744670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53EBCA39229BA09A00744670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A237A1581827EB36616C45 /* Pods-rns-ipad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "rns-ipad/rns-ipad.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = BWP8NTN4GT;
+				INFOPLIST_FILE = "rns-ipad/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53EBCA3A229BA09A00744670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F5F8026A09ECAF905EC546 /* Pods-rns-ipad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "rns-ipad/rns-ipad.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = BWP8NTN4GT;
+				INFOPLIST_FILE = "rns-ipad/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		53EBCA3C229BA09A00744670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "rns-ipadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rns-ipad.app/rns-ipad";
+			};
+			name = Debug;
+		};
+		53EBCA3D229BA09A00744670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "rns-ipadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rns-ipad.app/rns-ipad";
+			};
+			name = Release;
+		};
+		53EBCA3F229BA09A00744670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "rns-ipadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "rns-ipad";
+			};
+			name = Debug;
+		};
+		53EBCA40229BA09A00744670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "rns-ipadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uros.rns-ipadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "rns-ipad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53EBCA0B229BA09800744670 /* Build configuration list for PBXProject "rns-ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EBCA36229BA09A00744670 /* Debug */,
+				53EBCA37229BA09A00744670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EBCA38229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EBCA39229BA09A00744670 /* Debug */,
+				53EBCA3A229BA09A00744670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EBCA3B229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EBCA3C229BA09A00744670 /* Debug */,
+				53EBCA3D229BA09A00744670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EBCA3E229BA09A00744670 /* Build configuration list for PBXNativeTarget "rns-ipadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EBCA3F229BA09A00744670 /* Debug */,
+				53EBCA40229BA09A00744670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53EBCA08229BA09800744670 /* Project object */;
+}
