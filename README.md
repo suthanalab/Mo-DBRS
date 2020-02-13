@@ -38,5 +38,7 @@ Current implantable devices that allow for recording and stimulation of brain ac
 </p>
 
 ## Communication
+
 urostopalovic@ucla.edu (For technical issues)
+
 nsuthana@mednet.ucla.edu
