@@ -31,12 +31,16 @@ urostopalovic@ucla.edu (For technical issues)
 
 nsuthana@mednet.ucla.edu
 
+<br/><br/>
+
 ## Citation
 
 If you are using materials from this page please cite our paper (**TBD**): 
 <p align="justify">
 U. Topalović, Z. M. Aghajan, D. Villaroman, S. Hiller, L. Christov-Moore, T. J. Wishard, M. Stangl, N. R. Hasulak, C. S. Inman, T. A. Fields, D. Eliashiv, I. Fried, N. A. Suthana, <i>Wireless and Programmable Recording and Stimulation of Deep Brain Activity in Freely Moving Humans <b>TBD</b>.
 </p>
+  
+<br/><br/>
 
 **Abstract**
 <p align="justify">
