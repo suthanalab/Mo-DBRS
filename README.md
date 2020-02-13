@@ -25,6 +25,12 @@ Mobile Deep Brain Recording and Stimulation platform
 
 <br/><br/>
 
+## Communication
+
+urostopalovic@ucla.edu (For technical issues)
+
+nsuthana@mednet.ucla.edu
+
 ## Citation
 
 If you are using materials from this page please cite our paper (**TBD**): 
@@ -37,8 +43,3 @@ U. Topalović, Z. M. Aghajan, D. Villaroman, S. Hiller, L. Christov-Moore, T. J.
 Current implantable devices that allow for recording and stimulation of brain activity in humans are not inherently designed for research and thus lack programmable control and integration with wearable sensors. We developed a platform that enables wireless and programmable intracranial electroencephalographic recording and deep brain stimulation integrated with wearable technolo-gies. This methodology, when used in freely moving humans with implanted neural devices, can provide an ecologically valid environment conducive to elucidating the neural mechanisms underly-ing naturalistic behaviors and developing viable therapies for neurologic and psychiatric disorders.  
 </p>
 
-## Communication
-
-urostopalovic@ucla.edu (For technical issues)
-
-nsuthana@mednet.ucla.edu
