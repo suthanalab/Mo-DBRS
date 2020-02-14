@@ -27,7 +27,7 @@ Mobile Deep Brain Recording and Stimulation platform
 
 ## Communication
 
-urostopalovic@ucla.edu (For technical issues)
+urostopalovic@ucla.edu (For technical issues or incomplete/missing code)
 
 nsuthana@mednet.ucla.edu
 
@@ -42,7 +42,7 @@ U. Topalović, Z. M. Aghajan, D. Villaroman, S. Hiller, L. Christov-Moore, T. J.
 Preprint available at: https://www.biorxiv.org/content/10.1101/2020.02.12.946434v1
 </p>
   
-<br/><br/>
+<br/>
 
 **Abstract**
 <p align="justify">
