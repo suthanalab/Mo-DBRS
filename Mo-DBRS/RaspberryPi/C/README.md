@@ -1,4 +1,4 @@
-# Raspberry C Server (incomplete - coming soon)
+# Raspberry C Server
 
 # BCM 2835 Driver for RP GPIOs
 
