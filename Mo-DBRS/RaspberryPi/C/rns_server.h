@@ -14,6 +14,6 @@ typedef struct Param
 
 
 int server_open(Parameters param);
-int server_close();
+int server_join();
 
 #endif /* RNS_SERVER_H__ */
