@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import RPi.GPIO as GPIO
 import socket
 import time
 from rns import ResearchController
@@ -6,11 +7,22 @@ import timeit
 import sys
 import signal
 import datetime
+import multiprocessing
+
 
 PUPIL_LED_GPIO          = 38
 EXTERNAL_MAGNET_GPIO    = 40
 pupil_led               = 0
 external_magnet_led     = 0
+
+
+STORE_MSG = b'r'
+STIM_MSG = b's'
+MARK_MSG = b't'
+MAGNET_MSG = b'm'
+EXTERNAL_MAGNET_MSG = b'e'
+RESTART_MSG = b'u'
+CLOSE_MGG = b'q'
 
 # Define GPIOs
 GPIO.setmode(GPIO.BOARD)
@@ -33,7 +45,7 @@ def RNSMark(mark_trigger, controller, msg):
             mark_trigger.wait()
             controller.send_mark()
             timestamp = datetime.datetime.now()
-            msg = 'RNS Mark: ' + str(timestamp)
+            msg = 'RNS Mark: ' + str(timestamp) + '\n'
             TimestampQueue.put(msg)
             print(msg)
             mark_trigger.clear()
@@ -55,7 +67,12 @@ def SendExternalMagnet():
 
 STOP_TOKEN="STOP"
 TimestampQueue = multiprocessing.Queue()
-TimestampWriteProcess = multiprocessing.Process(target = TimestampWriter, args=("./rp_timestamps/stamps_" + datetime.datetime.now() + ".log", TimestampQueue, STOP_TOKEN))
+rp_timestamp_str = str(datetime.datetime.now())
+rp_timestamp_str = rp_timestamp_str.replace(' ', '_')
+rp_timestamp_str = rp_timestamp_str.replace(':', '-')
+rp_timestamp_str = rp_timestamp_str.replace('.', '_')
+
+TimestampWriteProcess = multiprocessing.Process(target = TimestampWriter, args=("./rp_timestamps/stamps_" + rp_timestamp_str+ ".log", TimestampQueue, STOP_TOKEN))
 TimestampWriteProcess.start()
 
 init = 0
@@ -92,21 +109,21 @@ size = 1
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 timestamp = datetime.datetime.now()
-msg = 'Server created: ' + str(timestamp)
+msg = 'Server created: ' + str(timestamp) + '\n'
 TimestampQueue.put(msg)
 print(msg)
 
-s.bind(('192.168.0.2', 50000))
+s.bind(('192.168.0.13', 8080))
 s.listen(backlog)
 timestamp = datetime.datetime.now()
-msg = 'Server listening: ' + str(timestamp)
+msg = 'Server listening: ' + str(timestamp) + '\n'
 TimestampQueue.put(msg)
 print(msg)
 
 
 client, address = s.accept()
 timestamp = datetime.datetime.now()
-msg = 'Client connected: ' + str(timestamp)
+msg = 'Client connected: ' + str(timestamp) + '\n'
 TimestampQueue.put(msg)
 print(msg)
 
@@ -115,7 +132,7 @@ print(msg)
 
 def signal_handler(sig, frame):
         timestamp = datetime.datetime.now()
-        msg = 'Server closing: ' + str(timestamp)
+        msg = 'Server closing: ' + str(timestamp) + '\n'
         TimestampQueue.put(msg)
         print(msg)
         if controller is not 0:
@@ -145,72 +162,79 @@ try:
         try:
             while 1:
                 data = client.recv(size)
-                print('RECEIVED DATA' + str(data))
+#                print('RECEIVED DATA' + str(data))
                 if not data:
                     timestamp = datetime.datetime.now()
-                    msg = 'Client closed: ' + str(timestamp)
+                    msg = 'Client closed: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
                     client.close()
                     break
-                print(data)
+ #               print(data)
 
                 if data == STORE_MSG:
-                    controller.send_store()
+
+                    if controller is not 0:
+                        controller.send_store()
                     timestamp = datetime.datetime.now()
-                    msg = 'Store: ' + str(timestamp)
+                    msg = 'Store: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
                 elif data == MARK_MSG:
                     mark_trigger.set()
                 elif data == MAGNET_MSG:
-                    controller.send_magnet()
+                    if controller is not 0:
+                        controller.send_magnet()
                     timestamp = datetime.datetime.now()
-                    msg = 'Magnet: ' + str(timestamp)
+                    msg = 'Magnet: ' + str(timestamp) + '\n' 
                     TimestampQueue.put(msg)
                     print(msg)
                 elif data == STIM_MSG:
-                    controller.send_stim()
+                    if controller is not 0:
+                        controller.send_stim()
                     timestamp = datetime.datetime.now()
-                    msg = 'Stim: ' + str(timestamp)
+                    msg = 'Stim: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
                 elif data == EXTERNAL_MAGNET_MSG:
                     SendExternalMagnet()
                     timestamp = datetime.datetime.now()
-                    msg = 'External magnet: ' + str(timestamp)
+                    msg = 'External magnet: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
                 elif data == RESTART_MSG:
+                    print('TEST2')
                     timestamp = datetime.datetime.now()
-                    msg = 'Server restart: ' + str(timestamp)
+                    msg = 'Server restart: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
                     client.close()
                     break
                 elif data == CLOSE_MSG:
                     timestamp = datetime.datetime.now()
-                    msg = 'Server closing: ' + str(timestamp)
+                    msg = 'Server closing: ' + str(timestamp) + '\n'
                     TimestampQueue.put(msg)
                     print(msg)
-                    controller.close()
+                    if controller is not 0:
+                        controller.close()
                     client.close()
                     s.close()
                     sys.exit(0)
 
         except:
                 timestamp = datetime.datetime.now()
-                msg = 'Server restart: ' + str(timestamp)
+                msg = 'Server restart: ' + str(timestamp) + '\n'
                 TimestampQueue.put(msg)
                 print(msg)
                 client.close()
                 break
 except:
         timestamp = datetime.datetime.now()
-        msg = 'Server closing: ' + str(timestamp)
+        msg = 'Server closing: ' + str(timestamp) + '\n'
         TimestampQueue.put(msg)
         print(msg)
-        controller.close()
+        if controller is not 0:
+            controller.close()
         client.close()
         s.close()
         sys.exit(0)
