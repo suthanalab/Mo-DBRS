@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <errno.h>
 #include <bcm2835.h>
-#include <Python.h>
 #define  BILLION 1000000000.0
 
 
@@ -32,77 +31,18 @@ int better_sleep(double sleep_time)
 	return 0;
 }
 
+int fd;
 
-int send_ssr(int fd)
-{
-	unsigned char write_buffer[] = "r";
-	int bytes_written = write(fd, write_buffer, 1);
-	return bytes_written;
-}
-int send_stim(int fd)
-{
-	unsigned char write_buffer[] = "s";
-	int bytes_written = write(fd, write_buffer, 1);
-	return bytes_written;
-}
-int send_mark(int fd)
-{
-	unsigned char write_buffer[] = "t";
-	int bytes_written = write(fd, write_buffer, 1);
-	return bytes_written;
-}
-int send_magnet(int fd)
-{
-	unsigned char write_buffer[] = "m";
-	int bytes_written = write(fd, write_buffer, 1);
-	return bytes_written;
-}
-
-
-int main(void)
+int rns_open(int rns_device, char* dev_port)
 {
 
-	if(!bcm2835_init())
-		printf("BCM Init failed!\n");
-	bcm2835_gpio_fsel(MAGNET_PIN, BCM2835_GPIO_FSEL_OUTP);
-	bcm2835_gpio_fsel(RECORD_PIN, BCM2835_GPIO_FSEL_OUTP);
-	
-
-	struct timespec start, end;
-	clock_gettime(CLOCK_REALTIME, &start);
-	bcm2835_gpio_write(MAGNET_PIN, HIGH);
-	clock_gettime(CLOCK_REALTIME, &end);
-	double time_spent = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / BILLION;
-	printf("\n%f\n", time_spent);
-
-
-	clock_gettime(CLOCK_REALTIME, &start);
-	bcm2835_gpio_write(MAGNET_PIN, LOW);
-	clock_gettime(CLOCK_REALTIME, &end);
-	time_spent = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / BILLION;
-	printf("\n%f\n", time_spent);
-
-
-
-	int n = 50;
-	while(n>0)
-	{
-
-		bcm2835_gpio_write(RECORD_PIN, HIGH);
-		better_sleep(1.0);
-		bcm2835_gpio_write(RECORD_PIN, LOW);
-		better_sleep(1.0);
-		n--;
-	}
-
-	return 0;
-/*
-	int fd;
-
-	fd = open("/dev/ttyACM0", O_RDWR | O_NOCTTY | O_NDELAY);
+	fd = open(dev_port, O_RDWR | O_NOCTTY | O_NDELAY);
 
 	if(fd == -1)
-		printf("\n Error! in Opening tty port");
+	{
+		printf("\n\nSerial port error. Make sure that the Programmer Accessory is connected\n\n");
+		return -1;
+	}
 	else
 		printf("\n tty Opened Successfully");
 
@@ -113,8 +53,16 @@ int main(void)
 
 	tcflush(fd, TCIOFLUSH);
 
-	cfsetispeed(&SerialPortSettings, B9600);
-	cfsetospeed(&SerialPortSettings, B9600);
+	if(rns_device == 300)
+	{
+		cfsetispeed(&SerialPortSettings, B9600);
+		cfsetospeed(&SerialPortSettings, B9600);
+	}
+	else if(rns_device == 320)
+	{
+		cfsetispeed(&SerialPortSettings, B57600);
+		cfsetospeed(&SerialPortSettings, B57600);
+	}
 
 	SerialPortSettings.c_cflag &= ~PARENB;
 	SerialPortSettings.c_cflag &= ~CSTOPB;
@@ -132,50 +80,82 @@ int main(void)
 	SerialPortSettings.c_oflag &= ~OPOST;
 
 	if((tcsetattr(fd, TCSANOW, &SerialPortSettings)) != 0)
+	{
 		printf("\n ERROR ! in setting attr");
-	else
-		printf("\n BaudRate = 9600 \n StopBits = 1 \n Parity = none");
+		return -1;
+	}
 
 
 	tcflush(fd, TCIOFLUSH);
 
+	printf("\nEstablishing the Programmer Accessory connection...");
 	sleep(10);
 
+	printf("\nProgrammer Accessory is ready.");
+	return 0;
 
+}
 
-	struct timespec start, end;
-	clock_gettime(CLOCK_REALTIME, &start);
-	send_mark(fd);
-	clock_gettime(CLOCK_REALTIME, &end);
-	double time_spent = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / BILLION;
-	printf("\n%f\n", time_spent);
-	
-	better_sleep(5.0);
+int rns_close()
+{
+	if(fd != -1)
+		close(fd);
+	return 0;
+}
 
-	int n = 5;
-	int i = 0;
-	struct timespec mark_timestamps[n];
-	while(i<n)
+int rns_send_store()
+{
+	int retCode = -1;
+	if(fd != - 1)
 	{
-		send_mark(fd);
-		clock_gettime(CLOCK_REALTIME, &mark_timestamps[i++]);
-		better_sleep(15.0);	
+		unsigned char write_buffer[] = "r";
+		retCode = write(fd, write_buffer, 1);
 	}
-
-	better_sleep(10.0);
-	send_ssr(fd);
-
-
-	for(i = 0; i < n; i++)
+	else
 	{
-		struct tm* mark_tm;
-		mark_tm = localtime(&mark_timestamps[i].tv_sec);
-		int mark_tm_sec = mark_tm->tm_min*60 + mark_tm->tm_sec;
-		printf("%d.%09ld\n", mark_tm_sec, mark_timestamps[i].tv_nsec);
+		printf("\nThe Programmer Accessory is not connected.");
 	}
-
-
-	close(fd);
-	
-*/
+	return retCode;
+}
+int rns_send_stim()
+{
+	int retCode = -1;
+	if(fd != - 1)
+	{
+		unsigned char write_buffer[] = "s";
+		retCode = write(fd, write_buffer, 1);
+	}
+	else
+	{
+		printf("\nThe Programmer Accessory is not connected.");
+	}
+	return retCode;
+}
+int rns_send_mark()
+{
+	int retCode = -1;
+	if(fd != - 1)
+	{
+		unsigned char write_buffer[] = "t";
+		retCode = write(fd, write_buffer, 1);
+	}
+	else
+	{
+		printf("\nThe Programmer Accessory is not connected.");
+	}
+	return retCode;
+}
+int rns_send_magnet()
+{
+	int retCode = -1;
+	if(fd != - 1)
+	{
+		unsigned char write_buffer[] = "m";
+		retCode = write(fd, write_buffer, 1);
+	}
+	else
+	{
+		printf("\nThe Programmer Accessory is not connected.");
+	}
+	return retCode;
 }
