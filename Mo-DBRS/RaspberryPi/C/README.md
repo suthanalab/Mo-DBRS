@@ -17,6 +17,6 @@
   - Make sure to add BCM header file to the library path by typing '-L..' or copy compiled BCM library to the same folder
   
    ```console
-  $ gcc -Wall rns.c rns_server.c main.c -o main -lbcm2835
+  $ gcc -Wall rns.c rns_server.c main.c -o main -lbcm2835 -lpthread
   $ sudo ./main
   ```
