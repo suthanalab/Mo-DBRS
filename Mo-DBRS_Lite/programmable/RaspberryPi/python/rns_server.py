@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import socket
 import time
-from rns import ResearchController
 import timeit
 import sys
 import signal
