@@ -5,15 +5,21 @@ import timeit
 import sys
 import signal
 import datetime
-
-PUPIL_LED_GPIO          = 38
-EXTERNAL_MAGNET_GPIO    = 40
+import multiprocessing
+import RPi.GPIO as GPIO
+PUPIL_LED_GPIO          = 40
+EXTERNAL_MAGNET_GPIO    = 38
 pupil_led               = 0
 external_magnet         = 0
 
+EXTERNAL_MAGNET_MSG = b'm'
+RESTART_MSG = b'u'
+CLOSE_MSG = b'q'
+
+
 # Define GPIOs
 GPIO.setmode(GPIO.BOARD)
-if external_magnet_led is not 0:
+if external_magnet is not 0:
     GPIO.setup(EXTERNAL_MAGNET_GPIO, GPIO.OUT)
 if pupil_led is not 0:
     GPIO.setup(PUPIL_LED_GPIO, GPIO.OUT)
@@ -51,7 +57,7 @@ def SendExternalMagnet(magnet_trigger, external_magnet, TimestampQueue):
 
 STOP_TOKEN="STOP"
 TimestampQueue = multiprocessing.Queue()
-TimestampWriteProcess = multiprocessing.Process(target = TimestampWriter, args=("./rp_timestamps/stamps_" + datetime.datetime.now() + ".log", TimestampQueue, STOP_TOKEN))
+TimestampWriteProcess = multiprocessing.Process(target = TimestampWriter, args=("./rp_timestamps/stamps_" + str(datetime.datetime.now()) + ".log", TimestampQueue, STOP_TOKEN))
 TimestampWriteProcess.start()
 
 init = 0
