@@ -1,5 +1,6 @@
 %Simple first-order detection of epileptic activity
 %Returns indices when values are higher than set thresholds, we discarded batches that had any detection from further analysis.
+%Hard-coded thresholds and filter cut-offs were set based on previous studies analysing epileptic activities in iEEG with 250 Hz sampling rate.
 function [epi_idx] = epi_detection(data_batch, Fs)
 
     data_zs = zscore(data_batch);
