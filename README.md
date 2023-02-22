@@ -35,11 +35,10 @@ nsuthana@mednet.ucla.edu
 
 ## Citation
 
-If you are using materials from this page please cite our paper (**TBD**): 
+If you are using materials from this page please cite our paper: 
 <p align="justify">
-U. Topalović, Z. M. Aghajan, D. Villaroman, S. Hiller, L. Christov-Moore, T. J. Wishard, M. Stangl, N. R. Hasulak, C. S. Inman, T. A. Fields, D. Eliashiv, I. Fried, N. A. Suthana, <i>Wireless and Programmable Recording and Stimulation of Deep Brain Activity in Freely Moving Humans</i>.
-  
-Preprint available at: https://www.biorxiv.org/content/10.1101/2020.02.12.946434v1
+Topalovic U, Aghajan ZM, Villaroman D, Hiller S, Christov-Moore L, Wishard TJ, Stangl M, Hasulak NR, Inman CS, Fields TA, Rao VR, Eliashiv D, Fried I, Suthana N. Wireless Programmable Recording and Stimulation of Deep Brain Activity in Freely Moving Humans. <i>Neuron</i> 108, 322–334 (2020).
+
 </p>
   
 <br/>
